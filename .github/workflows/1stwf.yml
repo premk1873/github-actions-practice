@@ -1,0 +1,19 @@
+name: gitact
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        run: echo"hello $USER"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: versions
+        run: docker --version && python --version
