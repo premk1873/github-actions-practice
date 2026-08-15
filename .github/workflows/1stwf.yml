@@ -13,6 +13,7 @@ jobs:
         run: echo "hello $USER"
 
   details:
+    needs: greet
     runs-on: ubuntu-latest
     steps:
       - name: versions
